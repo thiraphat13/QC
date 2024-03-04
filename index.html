@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Queue card</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/netpie.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center class="navber">
+            <table>
+                <tr>
+                    <th rowspan="2"><h1 class="textTop">Queue card</h1></th>
+                    <th><h2 class="textTop">Status : <span id="status" class="offline">Offline</span></h2></th>
+                </tr>
+                <tr>
+                    <th><button class="topBut" onclick="normalMessage('@msg/open','callMessage')">เรียก</button></th>
+                </tr>
+            </table>
+        </center>
+        <div class="card-list">
+            <div class="card">
+                <h1>ADMIN</h1>
+                <div id="show-@msg/open" class="messages">QC-1 : Confirm-callMessage</div>
+                <input type="text" id="topic_name">
+                <input type="text" id="msg_name">
+                <button class="butC" onclick='publishMessage()'>ส่ง</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/postcard.js"></script>
+    </body>
+</html>
